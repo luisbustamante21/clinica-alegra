@@ -1,0 +1,64 @@
+.container-servicios {
+    display: flex;
+    flex-wrap: wrap;
+    /* Permitirá que los elementos se envuelvan */
+    justify-content: center;
+    /* Centra horizontalmente los elementos */
+    gap: 50px;
+    /* Espacio entre los elementos */
+    padding: 0 15px;
+    /* Ajuste de padding para mejor alineación en dispositivos pequeños */
+    box-sizing: border-box;
+    /* Asegura que el padding no afecte al ancho total */
+    margin-bottom: 10px;
+    background-color: #f5f5f5;
+}
+
+.container-servicioindividual {
+    width: calc(50% - 20px);
+    /* Ancho del 50% con el espacio entre los elementos en cuenta */
+    max-width: 250px;
+    /* Máximo ancho para mantener el tamaño deseado en dispositivos más grandes */
+    margin-bottom: 20px;
+    /* Margen inferior para separar los elementos */
+    align-items: center;
+    /* Centra horizontalmente */
+    text-align: center;
+    /* Centra el texto horizontalmente */
+    margin-top: 20px;
+}
+
+.container-servicios h1 {
+    font-size: 20px;
+    /* Ajusta el tamaño del título */
+}
+
+.container-servicios p {
+    font-size: 14px;
+    max-width: 700px;
+    margin: 10px auto 20px;
+    line-height: 1.4;
+}
+
+.title {
+    text-align: center;
+    color: #444E68;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 40px 0 30px;
+}
+
+.title h2 {
+    font-size: 32px;
+    color: #444E68;
+    margin-top: 5px;
+    text-transform: none;
+}
+
+.title p {
+    font-size: 18px;
+    color: #444E68;
+    margin-top: 5px;
+    text-transform: none;
+}

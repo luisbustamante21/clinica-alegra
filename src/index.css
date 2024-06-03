@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+}
+
+body {
+  background: #F5F5F5;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.container {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.btn {
+  background-color: #ffffff00;
+  color: #fff;
+  /* Cambiamos el color del texto a blanco */
+  font-weight: bold;
+  /* Hacemos el texto en negrita */
+  padding: 14px 25px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 2px solid white;
+  /* Borde transparente */
+  outline: 0;
+  transition: background-color 0.3s ease;
+  /* Agregamos transición para el cambio de color */
+}
+
+/* Cambia el color de fondo al azul con efecto hover */
+.btn:hover {
+  background-color: #444e6893;
+}
+
+/**********************/
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background: #797979;
+  transition: all 0.5s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #22222452;
+}
+
+::-webkit-scrollbar-track {
+  background: #f9f9f9;
+}

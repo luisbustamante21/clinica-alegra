@@ -1,0 +1,94 @@
+.imagenfondo {
+    background: linear-gradient(rgba(8, 0, 58, 0.7), rgba(8, 0, 58, 0.7)),
+        url(../../assets/background2.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 45em;
+}
+
+.contenedorprincipal {
+    height: 45em;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulo {
+    padding-top: 50px;
+    padding-bottom: 30px;
+    color: white;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.titulo h2 {
+    font-size: 32px;
+    margin-top: 5px;
+    text-transform: none;
+}
+
+.contenedorsecundario {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.item {
+    background-color: rgba(255, 255, 255, 0.09);
+    height: 16em;
+    border: 2px solid white;
+    border-radius: 10px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.item:hover {
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.item img {
+    height: 75px;
+    width: 75px;
+    margin-bottom: 20px;
+    margin: 0 auto;
+}
+
+.item p {
+    color: white;
+    padding-left: 15%;
+    padding-right: 15%;
+    max-width: 700px;
+    margin: 10px auto 20px;
+    line-height: 1.4;
+    padding: 0 15px;
+    /* Añadir un relleno a los lados */
+    overflow: hidden;
+    /* Evitar que el texto se desborde */
+    text-overflow: ellipsis;
+    /* Mostrar puntos suspensivos si el texto es demasiado largo */
+    max-width: 100%;
+    font-size: 14px;
+}
+
+.imagenfondo .item:hover img {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+@media screen and (min-width: 768px) {
+    .item {
+        padding: 40px;
+        /* Ajustar el relleno para pantallas más grandes */
+    }
+
+    .item p {
+        font-size: 16px;
+        /* Ajustar el tamaño de fuente para pantallas más grandes */
+    }
+}
