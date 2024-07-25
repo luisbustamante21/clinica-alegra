@@ -1,0 +1,160 @@
+/* Contactanos.css */
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 31px;
+}
+
+.contact-container h1 {
+    margin-top: 80px;
+    font-weight: 600;
+    font-size: 32px;
+    color: #444E68;
+}
+
+.columns-contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 20px;
+}
+
+.column-contact {
+    flex: 1;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.column-contact iframe {
+    width: 100%;
+    height: 450px;
+}
+
+.column-contact p {
+    text-align: left;
+    margin: 0;
+}
+
+form {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    max-width: 600px;
+    /* Ancho máximo del formulario */
+    margin: auto;
+    /* Centra el formulario */
+    width: 100%;
+    font-size: 16px;
+
+    input {
+        width: 50%;
+        height: 35px;
+        padding: 7px;
+        outline: none;
+        border-radius: 5px;
+        border: 1px solid rgb(220, 220, 220);
+
+        &:focus {
+            border: 2px solid #444E68;
+        }
+    }
+
+    textarea {
+        max-width: 100%;
+        min-width: 80%;
+        width: 80%;
+        max-height: 100px;
+        min-height: 100px;
+        padding: 7px;
+        outline: none;
+        border-radius: 5px;
+        border: 1px solid rgb(220, 220, 220);
+
+        &:focus {
+            border: 2px solid #444E68;
+        }
+    }
+
+    label {
+        margin-top: 1rem;
+    }
+
+    input[type="submit"] {
+        margin-top: 2rem;
+        cursor: pointer;
+        border: none;
+        font-weight: bold;
+        font-size: 16px;
+        border-radius: 10px;
+        outline: 0;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        /* Agrega transición para el color del texto */
+        background-color: #d151559c;
+        pointer-events: none;
+        /* Inicialmente deshabilitado */
+        color: #444e685e;
+        /* Color de texto amarillo */
+    }
+
+    input[type="submit"]:hover {
+        background-color: rgb(249, 105, 14);
+    }
+
+    input[type="submit"]:not([disabled]):hover {
+        background-color: #ff8200;
+    }
+
+    /* Estilo cuando todos los campos están llenos */
+    input[type="submit"].envio-habilitado {
+        background-color: #D15156;
+        /* Cambia el color de fondo */
+        pointer-events: auto;
+        /* Habilita el click */
+        color: #444E68;
+        /* Cambia el color del texto a blanco */
+    }
+}
+
+form textarea {
+    max-width: 100%;
+    /* Ancho máximo del textarea */
+    min-width: 80%;
+    /* Ancho mínimo del textarea */
+    width: 80%;
+    /* Ancho inicial del textarea */
+    max-height: 100px;
+    /* Altura máxima del textarea */
+    min-height: 100px;
+    /* Altura mínima del textarea */
+    padding: 7px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid rgb(220, 220, 220);
+    resize: none;
+    /* Evita que el usuario pueda redimensionar el textarea */
+}
+
+form textarea:focus {
+    border: 2px solid #444E68;
+}
+
+@media (max-width: 768px) {
+    .columns-contact {
+        flex-direction: column;
+        /* Cambia a una columna en pantallas más pequeñas */
+    }
+
+    .column-contact {
+        order: 2;
+        /* Cambia el orden del formulario para que esté debajo */
+    }
+
+    .column-contact.order-1 {
+        order: 1;
+        /* Mantiene el mapa arriba en pantallas más pequeñas */
+    }
+}

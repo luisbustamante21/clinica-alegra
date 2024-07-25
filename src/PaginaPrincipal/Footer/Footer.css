@@ -1,0 +1,106 @@
+.footer {
+    background-color: #444E68;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    margin-bottom: -20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.column {
+    flex: 1;
+    text-align: center;
+    margin: 0 10px;
+}
+
+.logo-footer {
+    max-width: 40%;
+    height: auto;
+}
+
+.social-media {
+    display: flex;
+    flex-direction: column;
+    /* Cambia a dirección columna */
+    align-items: left;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+    margin-bottom: 10px;
+    /* Añade espacio entre cada enlace */
+}
+
+/* .social-link:hover {
+    color: #D15156;
+} */
+
+.social-icon {
+    font-size: 1em;
+    color: #fff;
+    margin-right: 5px;
+    /* Añade un pequeño margen entre el ícono y el nombre */
+}
+
+.social-name {
+    margin-left: 5px;
+    /* Añade un pequeño margen entre el ícono y el nombre */
+}
+
+.contact-info {
+    text-align: left;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+.contact-info a {
+    color: #1da1f2;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.centered-columns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.social-name,
+.contact-info p {
+    font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        position: relative;
+        font-size: 12px;
+        /* Reducir el tamaño de fuente en pantallas más pequeñas */
+    }
+
+    .logo-footer {
+        max-width: 70%;
+        /* Ajusta el tamaño máximo de la imagen para pantallas pequeñas */
+    }
+
+    .social-name,
+    .contact-info p {
+        font-size: 0.8em;
+        /* Reducir el tamaño de la fuente en pantallas más pequeñas */
+    }
+}

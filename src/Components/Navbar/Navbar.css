@@ -1,5 +1,4 @@
 nav {
-    /* background: #333; */
     width: 100%;
     color: #fff;
     padding: 4px 0;
@@ -12,8 +11,35 @@ nav {
     z-index: 10;
 }
 
+.btnWhatsapp {
+    background-color: #25D366;
+    color: #fff;
+    font-weight: 600;
+    padding: 9px 19px;
+    font-size: 13px;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 1px solid #25D366;
+    outline: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.whatsapp-icon {
+    font-size: 18px;
+}
+
+.btnWhatsapp:hover {
+    transform: scale(1.1);
+}
+
+
+
 .logo {
-    width: 180px;
+    max-width: 38%;
+    margin: 10px;
 }
 
 .logo-link {
@@ -26,7 +52,7 @@ nav ul li {
     list-style: none;
     margin: 5px 20px;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 800;
     color: #444E68;
     transition: color 0.3s ease, transform 0.3s ease;
     cursor: pointer;
@@ -37,9 +63,17 @@ li:hover {
     transform: scale(1.1);
 }
 
+.selected {
+    color: #D15156;
+}
+
 .dark-nav {
-    background-color: #f5f5f5;
     transition: 0.5s;
+    background-color: #444E68;
+}
+
+.dark-nav ul li:not(.selected) {
+    color: #fff;
 }
 
 .menu-icon {
@@ -48,6 +82,10 @@ li:hover {
 
 .container-menu-desplegable {
     display: none;
+}
+
+.nav li.active {
+    background-color: #555;
 }
 
 /* Media Query */
@@ -62,22 +100,25 @@ li:hover {
     }
 }
 
-@media (max-width: 749.60px) {
+@media (max-width: 1213.60px) {
     nav {
         padding: 15px 0;
     }
 
+    .dark-nav ul li:not(.selected) {
+        color: #444E68;
+    }
+
     nav ul {
         position: fixed;
-        top: 70px;
-        right: 0px;
+        top: 90px;
+        right: 0;
         background: #f5f5f5;
         z-index: -1;
-        width: 200px;
-        /* padding-top: 50px; */
+        width: 215px;
         transition: 0.5s;
         bottom: 0;
-        height: 200px;
+        height: 255px;
         border-top-left-radius: 15px;
         border-bottom-left-radius: 15px;
     }
@@ -88,21 +129,89 @@ li:hover {
         margin: 25px 40px;
     }
 
+    .btnWhatsapp {
+        background-color: #25D366;
+        color: #fff;
+        font-size: 13px;
+        font-weight: 800;
+        border-radius: 6px;
+        cursor: pointer;
+        border: 1px solid #25D366;
+        outline: 0;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        margin-left: 45px;
+        padding: 5px 10px;
+        transform: scale(1.1);
+        transition: transform 0.3s;
+    }
+
+    .btnWhatsapp:hover {
+        transform: scale(1.2);
+    }
+
     .menu-icon {
         display: block;
         width: 30px;
         cursor: pointer;
         width: 30px;
         height: 5%;
-        color: #444E68;
+        color: #fff;
     }
 
     .hidden-menu {
-        right: -200px;
+        right: -215px;
     }
 
     .container-menu-desplegable {
         display: block;
     }
 
+    .tratamientos-nav ul li {
+        color: #444E68;
+    }
+
+    .contactanos-nav ul li {
+        color: #444E68;
+    }
+}
+
+/*Tratamientos*/
+.selected-tratamientos {
+    color: white !important;
+}
+
+.tratamientos-page {
+    color: white;
+}
+
+.tratamientos-page:hover {
+    color: #D15156;
+}
+
+.tratamientos-page.selected {
+    color: #D15156;
+}
+
+.tratamientos-nav {
+    background-color: #444E68 !important;
+}
+
+/*Contactanos*/
+.contactanos-page {
+    color: white;
+}
+
+.contactanos-page:hover {
+    color: #D15156;
+}
+
+.contactanos-page.selected {
+    color: #D15156;
+}
+
+.contactanos-nav {
+    background-color: #444E68 !important;
 }

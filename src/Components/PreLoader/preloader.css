@@ -1,0 +1,112 @@
+/* PreLoader.css */
+.preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 1;
+    transition: opacity 1s ease-out;
+    /* Transición de opacidad */
+}
+
+.preloader.fade-out {
+    opacity: 0;
+    /* Opacidad a 0 para el desvanecimiento */
+}
+
+.spinner {
+    border: 16px solid #f5f5f5;
+    border-top: 16px solid #3498db;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.words-container {
+    display: flex;
+    margin-top: 20px;
+}
+
+.word {
+    font-size: 24px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    margin: 0 10px;
+    /* Espaciado entre palabras */
+    color: #444E68;
+    /* Color visible para el texto */
+}
+
+.word.show {
+    opacity: 1;
+}
+
+/* Media Queries para diferentes tamaños de pantalla */
+@media (max-width: 1200px) {
+    .spinner {
+        width: 100px;
+        height: 100px;
+        border-width: 12px;
+    }
+
+    .word {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    .spinner {
+        width: 80px;
+        height: 80px;
+        border-width: 10px;
+    }
+
+    .word {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .spinner {
+        width: 60px;
+        height: 60px;
+        border-width: 8px;
+    }
+
+    .word {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 576px) {
+    .spinner {
+        width: 50px;
+        height: 50px;
+        border-width: 6px;
+    }
+
+    .word {
+        font-size: 14px;
+        margin: 0 5px;
+        /* Espaciado reducido entre palabras en pantallas pequeñas */
+    }
+}
